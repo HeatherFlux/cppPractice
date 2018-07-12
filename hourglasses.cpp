@@ -11,11 +11,9 @@ using namespace std;
 
 // Complete the hourglassSum function below.
 int hourglassSum(vector<vector<int>> arr) {
-    int j = 0;
-    int i = 0;
     int max = arr[j][i]+arr[j][i+1]+arr[j][i+2]+arr[j+1][i+1]+arr[j+2][i]+arr[j+2][i+1]+arr[j+2][i+2];
-    for (j = 0; j < 4; j++){
-        for(i = 0; i<4; i++){
+    for (int j = 0; j < 4; j++){
+        for(int i = 0; i<4; i++){
            int temp = (arr[j][i]+arr[j][i+1]+arr[j][i+2]+arr[j+1][i+1]+arr[j+2][i]+arr[j+2][i+1]+arr[j+2][i+2]);
             if (temp > max){
                 max = temp;
